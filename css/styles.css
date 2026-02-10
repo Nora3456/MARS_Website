@@ -62,10 +62,14 @@ body {
 
 /* Hero Text */
 .hero-content h1 {
-  font-size: 5rem;
-  letter-spacing: 0.6em;
-  margin-bottom: 20px;
+  letter-spacing: 0.22em;
 }
+
+/* Tighter spacing for long titles */
+.hero-content h1.hero-title-tight {
+  letter-spacing: 0.22em;
+}
+
 
 .hero-content p {
   font-size: 0.95rem;
@@ -188,4 +192,12 @@ body {
 .emergency-columns p {
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+
+.hero-content h1 {
+  line-height: 1.9;
+}
+.hero-title-tight {
+  letter-spacing: 0.15em;
 }
