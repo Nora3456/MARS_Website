@@ -53,7 +53,6 @@ body {
       rgba(2, 11, 28, 0.85)
     ),
     url("../assets/mars-hero.png") center/cover no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,19 +62,19 @@ body {
 /* Hero Text */
 .hero-content h1 {
   letter-spacing: 0.22em;
+  line-height: 1.9;
 }
 
-/* Tighter spacing for long titles */
 .hero-content h1.hero-title-tight {
   letter-spacing: 0.22em;
 }
-
 
 .hero-content p {
   font-size: 0.95rem;
   letter-spacing: 0.15em;
   opacity: 0.85;
 }
+
 /* Generic Section Styling */
 .section {
   padding: 70px 80px;
@@ -140,7 +139,6 @@ body {
 }
 
 /* MEDICAL EMERGENCIES */
-/* MEDICAL EMERGENCIES – ORIGINAL STYLE */
 .emergencies {
   background: #ffffff;
   color: #020b1c;
@@ -152,7 +150,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* Boxed intro text (like original) */
 .emergency-box {
   max-width: 900px;
   margin: 0 auto 50px;
@@ -165,7 +162,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Columns */
 .emergency-columns {
   max-width: 1100px;
   margin: 0 auto;
@@ -194,10 +190,133 @@ body {
   line-height: 1.5;
 }
 
-
-.hero-content h1 {
-  line-height: 1.9;
+.page-content {
+  background-color: white;
+  color: black;
+  padding: 60px 10%;
+  text-align: center;
 }
-.hero-title-tight {
-  letter-spacing: 0.15em;
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.content-container p {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.week-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.week-section.dark {
+  background-color: #155c8a;
+  color: white;
+}
+
+.week-section.light {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.week-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.week-btn {
+  background-color: #081633;
+  color: white;
+  padding: 8px 22px;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.week-btn:hover {
+  background-color: #0f2c66;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   HAMBURGER SIDEBAR STUFF
+   (Added only, does not change existing formats)
+   ========================= */
+
+/* Hidden checkbox for toggle */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger button */
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  user-select: none;
+
+  color: #4da6ff; /* text color inside button */
+  background-color: #ffffff; /* your beautiful blue button */
+  padding: 2px 5px; /* makes it look more like a button */
+  border-radius: 4px; /* rounded corners */
+  border: none; /* no ugly borders */
+  transition: all 0.3s ease;
+}
+
+/* Change hamburger color when sidebar is open */
+#menu-toggle:checked + .menu-btn {
+  color: #4da6ff;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #081633;
+  padding: 40px 20px;
+  position: fixed;
+  right: -220px;   /* hide offscreen */
+  top: 0;
+  transition: right 0.3s;
+  z-index: 999;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #4da6ff;
+}
+
+/* Slide sidebar in when checkbox is checked */
+#menu-toggle:checked + .menu-btn + .sidebar {
+  right: 0;
 }

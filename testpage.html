@@ -1,0 +1,87 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS-Only Sidebar Menu</title>
+<style>
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger button */
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+  user-select: none;
+  color: black; /* default color */
+  transition: color 0.3s;
+}
+
+/* Change hamburger color when menu is open */
+#menu-toggle:checked + .menu-btn {
+  color: white;
+}
+
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* hidden by default */
+  width: 250px;
+  height: 100%;
+  background: #111;
+  padding-top: 60px;
+  transition: right 0.3s;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  background: #575757;
+}
+
+/* Slide sidebar in when checkbox is checked */
+#menu-toggle:checked + .menu-btn + .sidebar {
+  right: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- Hidden checkbox -->
+<input type="checkbox" id="menu-toggle">
+
+<!-- Hamburger -->
+<label class="menu-btn" for="menu-toggle">☰</label>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- Page content -->
+<div style="padding:20px;">
+  <h1>CSS-Only Sidebar Menu</h1>
+  <p>Click the ☰ in the top-right to open or close the sidebar. No JS required. 🤓</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Hamburger button -->
+<div id="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- Sidebar menu -->
+<div id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- Main content -->
+<div id="content">
+  <h1>Welcome to my site</h1>
+  <p>Click the ☰ in the top right to open the menu.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
