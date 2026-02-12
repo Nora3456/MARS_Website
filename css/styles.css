@@ -49,14 +49,14 @@ body {
 .hero {
   height: 100vh;
   background: linear-gradient(
-      rgba(2, 11, 28, 0.85),
-      rgba(2, 11, 28, 0.85)
+      #020b1c
     ),
     url("../assets/mars-hero.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #f2f2f2;
 }
 
 /* Hero Text */
@@ -89,6 +89,7 @@ body {
 /* OPERATION */
 .operation {
   background: #020b1c;
+  color: #f2f2f2;
 }
 
 .grid-2x2 {
@@ -110,6 +111,7 @@ body {
 /* CORE FUNCTIONS */
 .core {
   background: #020b1c;
+  color: #f2f2f2;
 }
 
 .core-layout {
@@ -319,4 +321,188 @@ body {
 /* Slide sidebar in when checkbox is checked */
 #menu-toggle:checked + .menu-btn + .sidebar {
   right: 0;
+}
+
+.goal-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+}
+
+.goal-section h2 {
+    font-size: 36px;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+    color: #071a33;
+}
+
+.goal-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #1e4d7b;
+}
+
+.requirements-section {
+    background-color: #020b1c;
+    color: white;
+    padding: 80px 40px;
+}
+
+.requirements-section h2 {
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 6px;
+    margin-bottom: 60px;
+}
+
+.requirements-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.requirements-list {
+    flex: 1;
+    min-width: 300px;
+}
+
+.requirements-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.requirements-list li {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.requirements-images {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+
+.feature-box img {
+    width: 150px;
+    height: auto;
+}
+
+.feature-box p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #00bfff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* LEFT SIDE */
+.about-left {
+  width: 45%;
+  text-align: center;
+}
+
+.about-left h1 {
+  font-weight: 900;
+  font-size: 42px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.description {
+  color: #1e73be; /* exact blue tone from image */
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.instructor {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.instructor strong {
+  font-weight: 700;
+}
+
+/* RIGHT SIDE */
+.about-right {
+  width: 45%;
+  text-align: center;
+}
+
+.about-right h2 {
+  font-weight: 900;
+  font-size: 42px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.team-photo {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.caption {
+  color: #1e73be;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .about-left h1,
+  .about-right h2 {
+    font-size: 32px;
+  }
+
+  .description,
+  .caption {
+    font-size: 16px;
+  }
+
+  .team-photo {
+    max-width: 100%;
+  }
 }
