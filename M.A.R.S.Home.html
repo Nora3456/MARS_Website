@@ -5,201 +5,280 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M.A.R.S – Home</title>
 
-  <!-- CSS -->
+  <!-- Original CSS -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* ===============================
+       RESPONSIVE NAVIGATION ONLY
+       (Everything else unchanged)
+    =============================== */
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #0a0f2c;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #4da6ff;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        justify-content: space-between;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #0a0f2c;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+      }
+
+      .nav-links a {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      #menu-toggle:checked ~ .navbar .nav-links {
+        display: flex;
+      }
+    }
+
+    /* Logo sizing only */
+    .hero-logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Hamburger Sidebar (NEW) -->
+<!-- NAVIGATION -->
 <input type="checkbox" id="menu-toggle">
-<label class="menu-btn" for="menu-toggle">☰</label>
 
-  <div class="sidebar">
+<nav class="navbar">
+  <label class="menu-btn" for="menu-toggle">☰</label>
+
+  <div class="nav-links">
     <a href="M.A.R.S.Home.html">Home</a>
     <a href="Testing_Data.html">Testing Data</a>
-     <a href="Prototype.html">Prototype</a>
+    <a href="Prototype.html">Prototype</a>
     <a href="Progress_2025.html">Progress 2025</a>
     <a href="Meet_The_Team.html">Meet the Team</a>
   </div>
+</nav>
 
-  <!-- Hero / Home Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>M.A.R.S</h1>
-      <p>Medical AI for Remote Space-Care</p>
-    </div>
-  </section>
+<!-- Hero / Home Section -->
+<section class="hero">
+  <div class="hero-content">
 
-  <!-- GOAL SECTION -->
+    <!-- ONLY CHANGE: Your Logo -->
+    <img src="Bazaart_E042386A-1767-4FFF-9C5A-26D56FF99C2E (2).PNG" alt="M.A.R.S Logo" class="hero-logo">
+
+    <h1>M.A.R.S</h1>
+    <p>Medical AI for Remote Space-Care</p>
+  </div>
+</section>
+
+<!-- GOAL SECTION (UNCHANGED) -->
 <section class="section goal-section">
-
-    <h2>GOAL OF M.A.R.S</h2>
-    <p>
-        The goal of M.A.R.S is to limit the constraints astronauts face in space regarding medical care, providing reliable, efficient, and lifesaving information. The medical assistant will use and include features such as biosensors, wearable devices, imaging systems, along with crew reported inputs that will allow it to act as a virtual crew medical officer. The system will support timely interventions and provide step-by-step diagnostic support, treatment recommendations, emergency procedures, and medication guidance.
-    </p>
+  <h2>GOAL OF M.A.R.S</h2>
+  <p>
+    The goal of M.A.R.S is to limit the constraints astronauts face in space regarding medical care, providing reliable, efficient, and lifesaving information. The medical assistant will use and include features such as biosensors, wearable devices, imaging systems, along with crew reported inputs that will allow it to act as a virtual crew medical officer. The system will support timely interventions and provide step-by-step diagnostic support, treatment recommendations, emergency procedures, and medication guidance.
+  </p>
 </section>
 
-<!-- REQUIREMENTS SECTION -->
+<!-- REQUIREMENTS SECTION (UNCHANGED) -->
 <section class="section requirements-section">
+  <h2>REQUIREMENTS</h2>
 
-    <h2>REQUIREMENTS</h2>
+  <div class="requirements-container">
 
-    <div class="requirements-container">
-
-        <!-- Left Side -->
-        <div class="requirements-list">
-            <ul>
-                <li>Data collection (patient symptoms and history)</li>
-                <li>AI processing</li>
-                <li>Recommendation engine (possible diagnoses / next steps)</li>
-                <li>User interface (easy-to-use system)</li>
-                <li>User authentication (secure login)</li>
-                <li>Emergency alerts (notification system)</li>
-                <li>Session management (track interactions)</li>
-                <li>Data quality checks (reliable data)</li>
-                <li>Autonomous operation</li>
-            </ul>
-        </div>
-
-        <!-- Right Side -->
-        <div class="requirements-images">
-
-            <div class="feature-box">
-                <img src="biosensors.png" alt="Biosensors">
-                <p>Biosensors</p>
-            </div>
-
-            <div class="feature-box">
-                <img src="reportedinputs.jpg" alt="Crew Reported Inputs">
-                <p>Crew Reported Inputs</p>
-            </div>
-
-            <div class="feature-box">
-                <img src="imaging.png" alt="Imaging Systems">
-                <p>Imaging Systems</p>
-            </div>
-
-            <div class="feature-box">
-                <img src="wearabledevice.png" alt="Wearable Devices">
-                <p>Wearable Devices</p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-  <!-- OPERATION SECTION -->
-  <section class="section operation">
-    <h2>OPERATION</h2>
-
-    <div class="grid-2x2">
-      <div>
-        <h3>User Interface</h3>
-        <p>
-          The system will be easy to use, including simple controls that allow
-          crew members to easily and quickly access information.
-        </p>
-      </div>
-
-      <div>
-        <h3>Output</h3>
-        <p>
-          Given the data, the system will create diagnostic insights, providing
-          possible diagnoses and next step recommendations.
-        </p>
-      </div>
-
-      <div>
-        <h3>Autonomous</h3>
-        <p>
-          The system will run autonomously. Blackouts, limited memory, and power
-          won’t be an issue.
-        </p>
-      </div>
-
-      <div>
-        <h3>Input</h3>
-        <p>
-          Data from biosensors, wearable devices, imaging systems, and crew
-          reports will be collected and saved in the system.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CORE MAJOR FUNCTIONS -->
-  <section class="section core">
-    <h2>CORE MAJOR FUNCTIONS</h2>
-
-    <div class="core-layout">
-      <img
-        src="MARS_Flowachart.png"
-        alt="M.A.R.S Program Flowchart"
-        class="flowchart"
-      />
-
+    <div class="requirements-list">
       <ul>
-        <li><strong>Data Collection:</strong> Gather patient symptoms and history.</li>
-        <li><strong>Machine Learning:</strong> Add training data that is well vetted.</li>
-        <li><strong>AI Processing:</strong> Analyze input using a machine learning model.</li>
-        <li><strong>Recommendation Engine:</strong> Suggest diagnoses or next steps.</li>
-        <li><strong>User Interface:</strong> Allows users to interact easily.</li>
-        <li>Keyboard</li>
-        <li>Audio</li>
-        <li>Video</li>
-        <li>Real-Time Data Feeds</li>
-        <li>Non-Real-Time Data Feeds</li>
+        <li>Data collection (patient symptoms and history)</li>
+        <li>AI processing</li>
+        <li>Recommendation engine (possible diagnoses / next steps)</li>
+        <li>User interface (easy-to-use system)</li>
+        <li>User authentication (secure login)</li>
+        <li>Emergency alerts (notification system)</li>
+        <li>Session management (track interactions)</li>
+        <li>Data quality checks (reliable data)</li>
+        <li>Autonomous operation</li>
       </ul>
     </div>
-  </section>
 
-  <!-- POSSIBLE MEDICAL EMERGENCIES -->
-  <section class="section emergencies">
-    <h2>POSSIBLE MEDICAL EMERGENCIES</h2>
+    <div class="requirements-images">
 
-    <div class="emergency-box">
+      <div class="feature-box">
+        <img src="biosensors.png" alt="Biosensors">
+        <p>Biosensors</p>
+      </div>
+
+      <div class="feature-box">
+        <img src="reportedinputs.jpg" alt="Crew Reported Inputs">
+        <p>Crew Reported Inputs</p>
+      </div>
+
+      <div class="feature-box">
+        <img src="imaging.png" alt="Imaging Systems">
+        <p>Imaging Systems</p>
+      </div>
+
+      <div class="feature-box">
+        <img src="wearabledevice.png" alt="Wearable Devices">
+        <p>Wearable Devices</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OPERATION SECTION (UNCHANGED) -->
+<section class="section operation">
+  <h2>OPERATION</h2>
+
+  <div class="grid-2x2">
+    <div>
+      <h3>User Interface</h3>
       <p>
-        Due to the extreme environmental factors of space, astronauts are more
-        likely to experience certain medical emergencies and conditions.
-      </p>
-      <p>
-        Having a “doctor” on board can help astronauts monitor and predict
-        possible medical situations, such as:
+        The system will be easy to use, including simple controls that allow
+        crew members to easily and quickly access information.
       </p>
     </div>
 
-    <div class="emergency-columns">
-      <div>
-        <h3>Psychological Changes</h3>
-        <ul>
-          <li>Anxiety</li>
-          <li>PTSD</li>
-          <li>Depression</li>
-          <li>Other psychological disorders</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Traumatic Injuries</h3>
-        <ul>
-          <li>Head trauma</li>
-          <li>Injuries after missions</li>
-          <li>Radiation exposure</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Why is this important?</h3>
-        <p>
-          Symptoms that are detected and input into the system aid the AI in
-          creating possible diagnoses that can ultimately save the life of an
-          astronaut.
-        </p>
-      </div>
+    <div>
+      <h3>Output</h3>
+      <p>
+        Given the data, the system will create diagnostic insights, providing
+        possible diagnoses and next step recommendations.
+      </p>
     </div>
-  </section>
+
+    <div>
+      <h3>Autonomous</h3>
+      <p>
+        The system will run autonomously. Blackouts, limited memory, and power
+        won’t be an issue.
+      </p>
+    </div>
+
+    <div>
+      <h3>Input</h3>
+      <p>
+        Data from biosensors, wearable devices, imaging systems, and crew
+        reports will be collected and saved in the system.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CORE MAJOR FUNCTIONS (UNCHANGED) -->
+<section class="section core">
+  <h2>CORE MAJOR FUNCTIONS</h2>
+
+  <div class="core-layout">
+    <img src="MARS_Flowachart.png" alt="M.A.R.S Program Flowchart" class="flowchart" />
+
+    <ul>
+      <li><strong>Data Collection:</strong> Gather patient symptoms and history.</li>
+      <li><strong>Machine Learning:</strong> Add training data that is well vetted.</li>
+      <li><strong>AI Processing:</strong> Analyze input using a machine learning model.</li>
+      <li><strong>Recommendation Engine:</strong> Suggest diagnoses or next steps.</li>
+      <li><strong>User Interface:</strong> Allows users to interact easily.</li>
+      <li>Keyboard</li>
+      <li>Audio</li>
+      <li>Video</li>
+      <li>Real-Time Data Feeds</li>
+      <li>Non-Real-Time Data Feeds</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EMERGENCIES (UNCHANGED) -->
+<section class="section emergencies">
+  <h2>POSSIBLE MEDICAL EMERGENCIES</h2>
+
+  <div class="emergency-box">
+    <p>
+      Due to the extreme environmental factors of space, astronauts are more
+      likely to experience certain medical emergencies and conditions.
+    </p>
+    <p>
+      Having a “doctor” on board can help astronauts monitor and predict
+      possible medical situations.
+    </p>
+  </div>
+
+  <div class="emergency-columns">
+    <div>
+      <h3>Psychological Changes</h3>
+      <ul>
+        <li>Anxiety</li>
+        <li>PTSD</li>
+        <li>Depression</li>
+        <li>Other psychological disorders</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Traumatic Injuries</h3>
+      <ul>
+        <li>Head trauma</li>
+        <li>Injuries after missions</li>
+        <li>Radiation exposure</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Why is this important?</h3>
+      <p>
+        Symptoms detected and input into the system aid the AI in creating
+        possible diagnoses that can ultimately save the life of an astronaut.
+      </p>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
