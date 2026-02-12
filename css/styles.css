@@ -86,6 +86,12 @@ body {
   margin-bottom: 40px;
 }
 
+.section p,
+.section li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 /* OPERATION */
 .operation {
   background: #020b1c;
@@ -329,20 +335,6 @@ body {
     background-color: #f5f5f5;
 }
 
-.goal-section h2 {
-    font-size: 36px;
-    letter-spacing: 6px;
-    margin-bottom: 30px;
-    color: #071a33;
-}
-
-.goal-section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #1e4d7b;
-}
 
 .requirements-section {
     background-color: #020b1c;
@@ -350,18 +342,14 @@ body {
     padding: 80px 40px;
 }
 
-.requirements-section h2 {
-    text-align: center;
-    font-size: 42px;
-    letter-spacing: 6px;
-    margin-bottom: 60px;
-}
 
 .requirements-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 60px;
 }
+
 
 .requirements-list {
     flex: 1;
@@ -373,10 +361,7 @@ body {
     padding-left: 20px;
 }
 
-.requirements-list li {
-    margin-bottom: 18px;
-    font-size: 18px;
-}
+
 
 .requirements-images {
     flex: 1;
@@ -506,3 +491,110 @@ body {
     max-width: 100%;
   }
 }
+
+/* =========================
+   GLOBAL RESPONSIVE FIXES
+   ========================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Reduce large side paddings on small screens */
+@media (max-width: 1100px) {
+  .section {
+    padding: 60px 40px;
+  }
+
+  .navbar {
+    padding: 20px 30px;
+  }
+}
+
+/* STACK ALL 2 COLUMN GRIDS */
+@media (max-width: 900px) {
+
+  .grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .core-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .requirements-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .requirements-images {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+/* GLOBAL STACK + SCALE FIX */
+@media (max-width: 1000px) {
+
+  .section {
+    padding: 60px 30px;
+  }
+
+  .goal-section {
+    padding: 60px 20px;
+  }
+
+  .requirements-section {
+    padding: 60px 20px;
+  }
+
+  .grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .core-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
