@@ -643,8 +643,10 @@ html, body {
 /* Lock hero logo size */
 .hero-logo {
   width: 150px;
+  max-width: 150px;
   height: auto;
 }
+
 }
 /* =========================
    RESPONSIVE NAV CONTROL
@@ -678,4 +680,7 @@ html, body {
   .sidebar {
     display: block;
   }
+}
+.hero {
+  padding-top: 100px;
 }
