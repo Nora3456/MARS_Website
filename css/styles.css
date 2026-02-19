@@ -57,7 +57,7 @@ body {
   background: linear-gradient(
       #020b1c
     ),
-    url("../assets/mars-hero.png") center/cover no-repeat;
+    url("../assets/mars-hero.png") center/contain no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
