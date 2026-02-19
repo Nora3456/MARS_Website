@@ -642,10 +642,12 @@ html, body {
 
 /* Lock hero logo size */
 .hero-logo {
-  width: 150px;
-  max-width: 150px;
-  height: auto;
+  width: 150px !important;
+  max-width: 150px !important;
+  height: auto !important;
+  flex-shrink: 0;
 }
+
 
 }
 /* =========================
