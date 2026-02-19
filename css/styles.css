@@ -18,10 +18,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  position: absolute;
+
+  position: fixed;   /* changed */
+  top: 0;            /* added */
+  left: 0;           /* added */
   width: 100%;
+  background-color: #020b1c;  /* added */
+
   z-index: 10;
 }
+
 
 .logo {
   font-weight: 700;
@@ -549,6 +555,7 @@ html, body {
 
   .hero-content p {
     font-size: 14px;
+    
   }
 }
 
@@ -632,4 +639,43 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+/* Lock hero logo size */
+.hero-logo {
+  width: 150px;
+  height: auto;
+}
+}
+/* =========================
+   RESPONSIVE NAV CONTROL
+   ========================= */
+
+/* Desktop navbar visible by default */
+.desktop-nav {
+  display: flex;
+}
+
+/* Hide hamburger + sidebar on large screens */
+.menu-btn,
+.sidebar {
+  display: none;
+}
+
+/* On small screens */
+@media (max-width: 900px) {
+
+  /* Hide desktop navbar */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .menu-btn {
+    display: block;
+  }
+
+  /* Sidebar base visibility */
+  .sidebar {
+    display: block;
+  }
 }

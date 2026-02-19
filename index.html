@@ -8,97 +8,29 @@
   <!-- Original CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 
-  <style>
-    /* ===============================
-       RESPONSIVE NAVIGATION ONLY
-       (Everything else unchanged)
-    =============================== */
-
-    #menu-toggle {
-      display: none;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      background-color: #0a0f2c;
-      padding: 15px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      color: #4da6ff;
-    }
-
-    .menu-btn {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      .navbar {
-        justify-content: space-between;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #0a0f2c;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        display: none;
-        padding: 20px 0;
-      }
-
-      .nav-links a {
-        padding: 15px 0;
-        width: 100%;
-        text-align: center;
-      }
-
-      #menu-toggle:checked ~ .navbar .nav-links {
-        display: flex;
-      }
-    }
-
-    /* Logo sizing only */
-    .hero-logo {
-      width: 150px;
-      margin-bottom: 20px;
-    }
-  </style>
+  
 </head>
 
 <body>
 
 <!-- NAVIGATION -->
+<!-- Hidden checkbox -->
 <input type="checkbox" id="menu-toggle">
 
-<nav class="navbar">
-  <label class="menu-btn" for="menu-toggle">☰</label>
+<!-- Hamburger Button -->
+<label class="menu-btn" for="menu-toggle">☰</label>
 
+<!-- Sidebar -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="Testing_Data.html">Testing Data</a>
+  <a href="Prototype.html">Prototype</a>
+  <a href="Progress_2025.html">Progress 2025</a>
+  <a href="Meet_The_Team.html">Meet The Team</a>
+</div>
+
+<!-- Desktop Navbar -->
+<nav class="navbar desktop-nav">
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="Testing_Data.html">Testing Data</a>
@@ -107,6 +39,7 @@
     <a href="Meet_The_Team.html">Meet the Team</a>
   </div>
 </nav>
+
 
 <!-- Hero / Home Section -->
 <section class="hero">
