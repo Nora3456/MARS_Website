@@ -15,7 +15,7 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;  /* right-aligns your nav links */
   align-items: center;
   padding: 20px 60px;
 
@@ -38,7 +38,11 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
+  margin: 0;      /* reset default ul margin */
+  padding: 0;     /* reset default ul padding */
+  align-items: center;  /* vertically center the items */
 }
+
 
 .nav-links a {
   text-decoration: none;
@@ -518,9 +522,13 @@ html, body {
     padding: 60px 40px;
   }
 
-  .navbar {
-    padding: 20px 30px;
-  }
+.navbar {
+  padding: 15px 60px; /* match both pages */
+  display: flex;
+  justify-content: flex-end; /* or space-between if you want logo + links */
+  align-items: center;
+}
+
 }
 
 /* STACK ALL 2 COLUMN GRIDS */
@@ -639,6 +647,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
 /* Lock hero logo size */
 .hero-logo {
@@ -648,8 +657,6 @@ html, body {
   flex-shrink: 0;
 }
 
-
-}
 /* =========================
    RESPONSIVE NAV CONTROL
    ========================= */
