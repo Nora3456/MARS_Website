@@ -412,11 +412,13 @@ body {
   padding: 80px 100px;
   max-width: 1400px;
   margin: 0 auto;
+    gap: 40px;
+  flex-wrap: wrap; /* IMPORTANT */
 }
 
 /* LEFT SIDE */
 .about-left {
-  width: 45%;
+  flex: 1 1 500px;
   text-align: center;
 }
 
@@ -450,7 +452,7 @@ body {
 
 /* RIGHT SIDE */
 .about-right {
-  width: 45%;
+ flex: 45%;
   text-align: center;
 }
 
@@ -463,7 +465,7 @@ body {
 
 .team-photo {
   width: 100%;
-  max-width: 420px;
+  max-width: 650px;
   border-radius: 2px;
   margin-bottom: 20px;
 }
@@ -717,4 +719,17 @@ html, body {
 
 .cap-size-photos-Sign-in {
   max-width: 700px;
+}
+
+
+.Get-connected {
+  color: #000000;
+  text-align: center;
+  width: 100%;
+}
+
+.centered-list {
+  display: inline-block;   /* makes the list shrink to content width */
+  text-align: left;        /* keeps bullet text aligned left */
+  margin-top: 20px;
 }
