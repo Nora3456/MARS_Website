@@ -693,3 +693,33 @@ html, body {
 .hero {
   padding-top: 100px;
 }
+
+.log-in-section {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.prototype-photos {
+  display: inside;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cap-size-photos {
+  max-width: 300px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.cap-size-photos-Sign-in {
+  max-width: 500px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 0 auto;
+  align-items: center;
+}
